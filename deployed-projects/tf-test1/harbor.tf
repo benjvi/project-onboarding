@@ -8,18 +8,26 @@ terraform {
   }
 }
 
-variable "harbor_connection_password" {
- type = string
-}
+
 
 variable "harbor_connection_username" {
   type = string
   default = "admin"
 }
 
+# for more convenience, suggest to set this in env with TF_VAR_harbor_connection_password
+variable "harbor_connection_password" {
+ type = string
+}
+
+# for more convenience, suggest to set this in env with TF_VAR_harbor_connection_password
+variable "harbor_url" {
+  type = string
+}
+
 # TODO: de-hardcode stuff like this
 provider "harbor" {
-  url      = "https://harbor.fly-env.fly.bjv.me"
+  url      = var.harbor_url
   username = var.harbor_connection_username
   password = var.harbor_connection_password 
 }
