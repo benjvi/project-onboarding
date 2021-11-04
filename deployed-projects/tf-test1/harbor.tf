@@ -25,7 +25,6 @@ variable "harbor_url" {
   type = string
 }
 
-# TODO: de-hardcode stuff like this
 provider "harbor" {
   url      = var.harbor_url
   username = var.harbor_connection_username
