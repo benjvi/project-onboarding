@@ -8,5 +8,5 @@ image:
 build_a:
   stage: deploy
   script:
-    - 'ls && sh ./gitlab-scripts/terraform-apply-projects.sh'
+    - './gitlab-scripts/terraform-apply-projects.sh'
 
