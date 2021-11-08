@@ -10,6 +10,6 @@ job:
   variables:
     TF_VAR_harbor_url: https://harbor.fly-env.fly.bjv.me
   script:
-    - 'mkdir -p ~/.kube && echo "$KUBECONFIG_CONTENT > ~/.kube/tf-config'
+    - 'mkdir -p ~/.kube && echo "$KUBECONFIG_CONTENT" > ~/.kube/tf-config'
     - './gitlab-scripts/terraform-apply-projects.sh'
 
