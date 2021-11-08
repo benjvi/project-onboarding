@@ -1,22 +1,22 @@
 
 # dev 
 provider "kubernetes" {
-  config_path    = "~/.kube/config"
-  config_context = "rpi"
+  config_path    = "~/.kube/tf-config"
+  config_context = "gitlab-terraform"
   alias = "dev"
 }
 
 # acc
 provider "kubernetes" {
-  config_path    = "~/.kube/config"
-  config_context = "rpi"
+  config_path    = "~/.kube/tf-config"
+  config_context = "gitlab-terraform"
   alias = "acc"
 }
 
 # prod
 provider "kubernetes" {
-  config_path    = "~/.kube/config"
-  config_context = "rpi"
+  config_path    = "~/.kube/tf-config"
+  config_context = "gitlab-terraform"
   alias = "prod"
 }
 

@@ -14,6 +14,6 @@ for proj in $projects; do
     cd -
     echo "\n-----------  Finished deploying $proj  ------------\n\n"
   else
-    echo "Folder \"deployed-projects/$proj\" not found, skipping"
+    echo "Folder \"deployed-projects/$proj\" not found (it may have been deleted), skipping"
   fi
 done 
