@@ -37,7 +37,7 @@ resource "harbor_project_member_user" "masters" {
 
 resource "harbor_retention_policy" "project" {
     scope = harbor_project.project.id
-    schedule = "daily"
+    schedule = "0 0 0 * * *"
     rule {
         n_days_since_last_pull = 180
         repo_matching = "**"
