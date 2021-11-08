@@ -8,5 +8,5 @@ image:
 build_a:
   stage: deploy
   script:
-    - 'git diff --name-only HEAD~5 | grep deployed-projects | cut -d "/" -f2 | sort | uniq'
+    - 'git diff --name-only HEAD~10 | grep deployed-projects | cut -d "/" -f2 | sort | uniq'
 
