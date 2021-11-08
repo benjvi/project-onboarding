@@ -35,6 +35,9 @@ resource "kubernetes_namespace" "project-ns" {
   metadata {
     name = var.project-name
   }
+  lifecycle {
+    prevent_destroy = true
+  }
 }
 
 resource "kubernetes_role_binding" "namespace-admins" {

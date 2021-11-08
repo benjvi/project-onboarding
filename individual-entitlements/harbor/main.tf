@@ -26,6 +26,9 @@ resource "harbor_project" "project" {
   vulnerability_scanning  = true                # automatically scan images on push 
   enable_content_trust    = true                # allow unsigned images from being pulled 
   storage_quota = var.storage_quota
+  lifecycle {
+    prevent_destroy = true
+  }
 }
 
 resource "harbor_project_member_user" "masters" {
