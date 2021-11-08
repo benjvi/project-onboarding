@@ -1,7 +1,7 @@
 stages:
   - deploy
 
-image: alpine
+image: ubuntu
 
 build_a:
   stage: deploy
