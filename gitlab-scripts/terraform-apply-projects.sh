@@ -5,11 +5,15 @@ projects="$(git diff --name-only HEAD~14 | grep deployed-projects | cut -d "/" -
 printf "Will deploy the following projects with changes detected:\n${projects}\n"
 
 for proj in $projects; do
-  printf "\n-----------  Starting to deploy $proj  -------------\n\n"
-  cd "deployed-projects/$proj"
-  ls
-  terraform init
-  terraform plan
-  cd -
-  echo "\n-----------  Finished deploying $proj  ------------\n\n"
+  if [ -d "deployed-projects/$proj" ]; then
+    printf "\n-----------  Starting to deploy $proj  -------------\n\n"
+    cd "deployed-projects/$proj"
+    ls
+    terraform init
+    terraform plan
+    cd -
+    echo "\n-----------  Finished deploying $proj  ------------\n\n"
+  else
+    echo "Folder \"deployed-projects/$proj\" not found, skipping"
+  fi
 done 
