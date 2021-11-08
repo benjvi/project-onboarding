@@ -15,7 +15,7 @@ for proj in $projects; do
     terraform apply -auto-approve
 
     git add . 
-    git commit -m "Gitlab CI scrip: applied terraform for $proj"
+    git commit -m "Gitlab CI script: applied terraform for $proj"
     git push
     printf "\n-----------  Finished deploying $proj  ------------\n\n"
 
