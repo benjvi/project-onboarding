@@ -11,3 +11,6 @@ fi
 cd "$deploy_dir"
 vi terraform.tfvars
 
+git add .
+git commit -m "generate project $project"
+git pull -r --autostash && git push
