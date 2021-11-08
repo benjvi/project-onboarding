@@ -5,8 +5,10 @@ image:
   name: hashicorp/terraform
   entrypoint: [""]
 
-build_a:
+job:
   stage: deploy
+  variables:
+    TF_VAR_harbor_url: https://harbor.fly-env.fly.bjv.me
   script:
     - './gitlab-scripts/terraform-apply-projects.sh'
 
