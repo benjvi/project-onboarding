@@ -13,8 +13,13 @@ for proj in $projects; do
     ls
     terraform init
     terraform apply -auto-approve
-    cd -
+
+    git add . 
+    git commit -m "Gitlab CI scrip: applied terraform for $proj"
+    git push
     printf "\n-----------  Finished deploying $proj  ------------\n\n"
+
+    cd -
   else
     echo "Folder \"deployed-projects/$proj\" not found (it may have been deleted), skipping"
   fi
