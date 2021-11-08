@@ -7,7 +7,8 @@ deploy-job:
     refs:
       - main
     changes:
-      - deployed-projects/**/*
+      - deployed-projects/**/*.tf
+      - deployed-projects/**/*.tfvars
   variables:
     TF_VAR_harbor_url: https://harbor.fly-env.fly.bjv.me
   before_script:
