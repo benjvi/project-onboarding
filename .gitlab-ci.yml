@@ -1,12 +1,13 @@
-stages:
-  - deploy
-
 image:
   name: hashicorp/terraform
   entrypoint: [""]
 
-job:
-  stage: deploy
+deploy-job:
+  only:
+    refs:
+      - main
+    changes:
+      - deployed-projects/**/*
   variables:
     TF_VAR_harbor_url: https://harbor.fly-env.fly.bjv.me
   script:
