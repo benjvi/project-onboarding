@@ -1,7 +1,9 @@
 stages:
   - deploy
 
-image: ubuntu
+image:
+  name: hashicorp/terraform
+  entrypoint: ["/bin/sh"]
 
 build_a:
   stage: deploy
