@@ -12,4 +12,4 @@ if [ ! $(git fetch origin "$(git branch --show-current)") ]; then
 else
   git pull -r --autostash
 fi
-git push -u origin
+git push -u origin "$(git branch --show-current)"
