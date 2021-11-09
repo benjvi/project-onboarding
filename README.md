@@ -25,4 +25,4 @@ For updates, you may follow the same process as requesting new infrastructure. I
 
 ## Deletion of Infrastructure
 
-For deleting individual pieces of infrastructure, you may disable them following the same process as for creation and update, by setting the appropriate options in the `terraform.tfvars` file. Note that any provisioning that would delete a Kubernetes Namespace or Harbor Project will result in an error. This is to force manual review of such actions. Manual action to delete those objects will be required before the remaining automated provisioning actions will succeed.
+For deleting individual pieces of infrastructure, you may disable them following the same process as for creation and update, by setting the appropriate options in the `terraform.tfvars` file. Note that any provisioning that would delete a Kubernetes Namespace or Harbor Project will result in an error. This is intentional, so that manual review of such actions must occur. As a consequence, manual deletion of those objects will be required before the remaining automated provisioning actions will succeed.
