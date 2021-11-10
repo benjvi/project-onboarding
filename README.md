@@ -33,7 +33,7 @@ The structure of the terraform is shown as follows, along with the minimal steps
 
 ![terraform structure + manual deployment](docs/img/terraform-manual-deployment.png)
 
-This shows that each project is copied from the same template, specifying which entitlements to enable and any required custom values. Each entitlement references some standard template for how to setup e.g. a Kubernetes namespace, or Harbor project. One of the goals of this design is to make such configurations standardized but available to all.
+This shows that each project is copied from the same template, specifying which entitlements to enable and any required custom values. Each entitlement references some standard template for how to setup e.g. a Kubernetes namespace, or Harbor project. One of the goals of this design is to make such configurations standardized but readable by all.
 
 When operating in a GitOps model, as is the expected case, the workflow looks more like this:
 
